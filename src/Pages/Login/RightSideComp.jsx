@@ -1,7 +1,38 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin2 from '../shared/SocialLogin/SocialLogin2';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const RightSideComp = () => {
+  const { loginUser, setUser } = useContext(AuthContext);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || '/';
+  // console.log(from);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const formInput = e.target;
+    const email = formInput.email.value;
+    const password = formInput.password.value;
+    setErrorMsg(null);
+    console.table({ email, password });
+    // console.log(errorMsg);
+    loginUser(email, password)
+      .then((res) => {
+        setUser(res.user);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMsg(errorMessage);
+      });
+  };
+
   return (
     <div className='flex-1 flex items-center justify-center h-screen'>
       <div className='w-full max-w-md space-y-8 px-4 bg-white text-gray-600 py-8'>
@@ -20,7 +51,7 @@ const RightSideComp = () => {
             </p>
           </div>
         </div>
-        <SocialLogin2 />
+        <SocialLogin2 from={from} />
 
         <div className='relative'>
           <span className='block w-full h-px bg-gray-300'></span>
@@ -29,7 +60,7 @@ const RightSideComp = () => {
           </p>
         </div>
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleLogin}
           className='space-y-5'>
           <div>
             <label className='font-medium'>Email</label>
