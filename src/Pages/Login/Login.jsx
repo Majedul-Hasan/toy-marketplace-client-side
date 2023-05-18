@@ -1,5 +1,17 @@
-const Login = () => {
-  return <div>Login</div>;
+import PageWrapper from '../../Layout/PageWrapper';
+
+import RightSideComp from './RightSideComp';
+import LeftSideComponent from '../shared/LeftSideComponent';
+
+const Register = () => {
+  return (
+    <PageWrapper>
+      <main className='w-full flex'>
+        <LeftSideComponent />
+        <RightSideComp />
+      </main>
+    </PageWrapper>
+  );
 };
 
-export default Login;
+export default Register;
