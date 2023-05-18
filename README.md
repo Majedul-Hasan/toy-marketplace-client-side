@@ -14,8 +14,8 @@
     <br />
     
   </p>
-    <a  href="https://your-iteliano-recipe-majedul-hasan.vercel.app/">live server </a>
-  <a  href="https://chef-recipe-hunter-clien-47689.web.app/">live client </a>
+    <a  href="https://toy-marketplace-server-eight.vercel.app/">live server </a>
+  <a  href="https://toys-zone-9fb17.web.app/">live client </a>
 </div>
 
 

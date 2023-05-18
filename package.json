@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "daisyui": "^2.51.6",
+    "firebase": "^9.22.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
+    "react-backdrop-filter": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2"
   },
