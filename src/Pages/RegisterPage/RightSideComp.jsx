@@ -1,7 +1,59 @@
-import { Link } from 'react-router-dom';
-import SocialLogin2 from '../shared/socialLiging/SocialLogin2';
+import { Link, useNavigate } from 'react-router-dom';
+import SocialLogin2 from '../shared/SocialLogin/SocialLogin2';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const RightSideComp = () => {
+  const { createUser, updateUser, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    setErrorMsg(null);
+    const formInput = e.target;
+    const name = formInput.name.value;
+    const photoUrl = formInput.photo.value;
+    const email = formInput.email.value;
+    const password = formInput.password.value;
+    const confirm = formInput.confirm.value;
+
+    // console.table({ name, email, password, photoUrl, confirm });
+    if (password !== confirm) {
+      setErrorMsg('password not matched');
+      return;
+    }
+    if (password.length < 6) {
+      setErrorMsg('password should be at least 6 characters');
+      return;
+    }
+    if (
+      !email
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+    ) {
+      setErrorMsg('please enter a valid email address');
+      return;
+    }
+    // console.log(errorMsg);
+    createUser(email, password)
+      .then((res) => {
+        const loggedUser = res.user;
+        // console.log(loggedUser);
+        setUser(loggedUser);
+        updateUser(name, photoUrl);
+        formInput.reset();
+        navigate('/');
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMsg(errorMessage);
+      });
+  };
+
   return (
     <div className='flex-1 flex items-start justify-center '>
       <div className='w-full max-w-md space-y-6 px-4 bg-white text-gray-600 py-8'>
@@ -29,7 +81,7 @@ const RightSideComp = () => {
           </p>
         </div>
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleRegister}
           className='space-y-5'>
           <div>
             <label className='font-medium'>Name</label>
@@ -44,7 +96,7 @@ const RightSideComp = () => {
             <label className='font-medium'>Photo url</label>
             <input
               type='text'
-              required
+              defaultValue='https://cdn-icons-png.flaticon.com/512/149/149071.png'
               name='photo'
               className='w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg'
             />
@@ -76,6 +128,7 @@ const RightSideComp = () => {
               className='w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg'
             />
           </div>
+          {errorMsg && <p className='text-md text-red-400'> {errorMsg}</p>}
           <button className='w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150'>
             Create account
           </button>

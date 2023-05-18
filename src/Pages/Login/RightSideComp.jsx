@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SocialLogin2 from '../shared/socialLiging/SocialLogin2';
+import SocialLogin2 from '../shared/SocialLogin/SocialLogin2';
 
 const RightSideComp = () => {
   return (
