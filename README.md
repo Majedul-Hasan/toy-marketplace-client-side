@@ -1,8 +1,78 @@
 # **Toy Marketplace**
+<a name="readme-top"></a>
 
-A company is seeking a web developer who can create a simple full-stack Toy Marketplace website. You are required to focus on a specific toy category, such as-
+<br />
+<div align="center">
+  <a href="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-Majedul-Hasan">
+    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-Majedul-Hasan/blob/master/src/assets/logo-01.png" alt="Logo"  height="80">
+  </a>
 
-    - Toy Cars(sports car, truck, regular car, mini fire truck, mini police car, etc.)
+  <h3 align="center">TOYS ZONE || assignment 11 client</h3>
+
+  <p align="center">
+    Main Requirements && Bonus Requirements for this assignment
+    <br />
+    
+  </p>
+    <a  href="https://your-iteliano-recipe-majedul-hasan.vercel.app/">live server </a>
+  <a  href="https://chef-recipe-hunter-clien-47689.web.app/">live client </a>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+  <li>
+      <a href="#Project-description-n-doc">Project description and Documentation</a>
+    </li>
+    <li>
+      <a href="#main-requirements">Main Requirements</a>
+      <ul>
+        <li><a href="#json-info"> JSON information from server</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#bonus-requirements">Bonus Requirements</a>
+    </li>
+    
+  </ol>
+</details>
+
+
+
+# Project description and Documentation
+<!-- Main Requirements -->
+## description
+## Documentation
+ - logo && icon figma link:  https://www.figma.com/file/vsBzugsPFKW2N8x3tXOSgS/Untitled?type=design&node-id=0-1&t=bAmcNuRc5tJCy7Yz-0
+
+
+
+
+# Task description
+<!-- Main Requirements -->
+
+1. Focus on making the website visually appealing. Ensure that   ✅
+    - Color contrast is pleasing to the eye   ✅   <a href="https://www.figma.com/file/vsBzugsPFKW2N8x3tXOSgS/Untitled?type=design&node-id=0-1&t=bAmcNuRc5tJCy7Yz-0">Color contrast</a>
+    - The website does not have a `gobindo design`   ✅
+    - The website has proper alignment and space    ✅ 
+    1. alignment components are designed to make sure proper alignment and space   ✅ 
+    - If needed, customize the design of any component you are taking from any component library. (For example, you are using daisy ui & have taken a card component from Daisy, if needed, customize the styling of the card to make it reasonable rather than just copy & paste it.)  ✅ 
+    <br/>
+    <br/>
+    >**  <a href="https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-full-blue-sky-white-clouds-small-tree-hillside-holiday-travel-background-image_60535.jpg">footer background img</a>
+    >**  <a href="https://as2.ftcdn.net/v2/jpg/01/32/34/05/1000_F_132340568_SAK4D87tKa7mkotaBrikQp06KMA5BSQT.jpg">footer background img 02</a>
+
+
+
+## Main Requirements
+
+
+A company is seeking a web developer who can create a simple full-stack Toy Marketplace website. You are required to focus on a specific toy category, such as-  ✅
+
+    - Toy Cars(sports car, truck, regular car, mini fire truck, mini police car, etc.) ✅
     - Action figure toys(marvel, avengers, star wars, transformers, etc.)
     - Animal toys(teddy bear, horse, dinosaur, dogs, cat, unicorn, cows, etc.)
     - Sports toys(miniature or plastic version of sports accessories) 
@@ -24,19 +94,19 @@ A company is seeking a web developer who can create a simple full-stack Toy Mark
     
  If you select Disney dolls toys, your website will only showcase toys related to that particular types. Do not mix different types of toys in your website.
 
-Make sure your website design is unique. Visit ThemeForest, Dribble, google, etc., to get some ideas.
+Make sure your website design is unique. Visit ThemeForest, Dribble, google, etc., to get some ideas.  ✅
 
-You can explore component libraries other than DaisyUI. Remember, a unique project will add more value to your portfolio.
+You can explore component libraries other than DaisyUI. Remember, a unique project will add more value to your portfolio. ✅
 <hr/>
 <br/>
 🚩: 0 [ If we have any update we will mention it here ] 
 <br/>
 
 ## **Main Requirements**
-1. Focus on making the website visually appealing. Ensure that
-    - Color contrast is pleasing to the eye
-    - The website does not have a `gobindo design`
-    - The website has proper alignment and space
+1. Focus on making the website visually appealing. Ensure that   ✅
+    - Color contrast is pleasing to the eye   ✅
+    - The website does not have a `gobindo design`   ✅
+    - The website has proper alignment and space    ✅
     - If needed, customize the design of any component you are taking from any component library. (For example, you are using daisy ui & have taken a card component from Daisy, if needed, customize the styling of the card to make it reasonable rather than just copy & paste it.)
     <br/>
     <br/>
