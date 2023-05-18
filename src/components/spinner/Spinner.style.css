@@ -1,0 +1,15 @@
+#spinner{
+        border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    background: url(https://babystreet.althemist.com/wp-content/themes/babystreet/image/001-rocking-horse.png) center center no-repeat;
+    background-size: 80px 80px;
+    -webkit-animation: babystreet-swing ease-in-out 0.5s infinite alternate;
+    animation: babystreet-swing ease-in-out 0.5s infinite alternate;
+    transform-origin: center 120px;
+
+}

@@ -3,6 +3,7 @@ import Login from '../Pages/Login/Login';
 
 import MainLayout from '../Layout/MainLayout';
 import RegisterPage from '../Pages/RegisterPage/RegisterPage';
+import Error404 from '../Pages/Error404Page/Error404';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         element: <RegisterPage />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <Error404 />,
   },
 ]);
 

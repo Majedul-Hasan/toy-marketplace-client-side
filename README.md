@@ -62,8 +62,9 @@
     - If needed, customize the design of any component you are taking from any component library. (For example, you are using daisy ui & have taken a card component from Daisy, if needed, customize the styling of the card to make it reasonable rather than just copy & paste it.)  ✅ 
     <br/>
     <br/>
-    >**  <a href="https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-full-blue-sky-white-clouds-small-tree-hillside-holiday-travel-background-image_60535.jpg">footer background img</a>
-    >**  <a href="https://as2.ftcdn.net/v2/jpg/01/32/34/05/1000_F_132340568_SAK4D87tKa7mkotaBrikQp06KMA5BSQT.jpg">footer background img 02</a>
+    # Img src
+    <a href="https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-full-blue-sky-white-clouds-small-tree-hillside-holiday-travel-background-image_60535.jpg">footer background img</a>
+   <a href="https://as2.ftcdn.net/v2/jpg/01/32/34/05/1000_F_132340568_SAK4D87tKa7mkotaBrikQp06KMA5BSQT.jpg">footer background img 02</a>
 
 
 
