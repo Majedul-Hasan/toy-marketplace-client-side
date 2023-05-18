@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Login from '../Pages/Login/Login';
-import App from '../App';
+
+import MainLayout from '../Layout/MainLayout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <MainLayout />,
     loader: () => fetch('http://localhost:5000'),
     children: [
       {
