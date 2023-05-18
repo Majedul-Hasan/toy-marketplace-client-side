@@ -2,7 +2,7 @@ import logo from '../../assets/Logo.svg';
 
 const LeftSideComponent = () => {
   return (
-    <div className='relative flex-1 hidden items-center justify-center h-screen bg-sky-300/70  lg:flex'>
+    <div className='relative flex-1 hidden items-center justify-center h-screen  bg-[#8cfc7db3]  lg:flex'>
       <div className='relative z-10 w-full max-w-md'>
         <div className='w-1/2 mx-auto'>
           <img src={logo} />
