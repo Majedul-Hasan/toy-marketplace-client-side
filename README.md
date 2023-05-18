@@ -47,7 +47,15 @@
 ## description
 ## Documentation
  - logo && icon figma link:  https://www.figma.com/file/vsBzugsPFKW2N8x3tXOSgS/Untitled?type=design&node-id=0-1&t=bAmcNuRc5tJCy7Yz-0
+ - go to https://console.firebase.google.com, create a new project select web add app name to register app 
+ - make a new file to root dir namee .env.local copy pest code below-
 
+  - VITE_apiKey = 
+  - VITE_authDomain = 
+  - VITE_projectId = 
+  - VITE_storageBucket = 
+  - VITE_messagingSenderId = 
+  - VITE_appId = 
 
 
 

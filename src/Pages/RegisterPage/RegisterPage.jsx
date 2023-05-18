@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../shared/socialLiging/SocialLoging';
 const RegisterPage = () => {
   // eslint-disable-next-line no-unused-vars
   const [errorMsg, setErrorMsg] = useState(null);
@@ -102,6 +103,7 @@ const RegisterPage = () => {
           </small>
         </form>
       </div>
+      <SocialLogin />
     </div>
   );
 };

@@ -14,7 +14,7 @@ function Error404() {
             />
             <Link
               to='/'
-              className='btn-go-home'>
+              className='btn-go-home flex flex-nowrap w-fit '>
               GO BACK HOME
             </Link>
           </div>

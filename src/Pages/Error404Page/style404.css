@@ -73,7 +73,7 @@ html, body{
     position: relative;
     z-index: 200;
     margin: 15px auto;
-    width: 100px;
+   
     padding: 10px 15px;
     border: 1px solid #FFCB39;
     border-radius: 100px;
@@ -84,6 +84,7 @@ html, body{
     text-decoration: none;
     letter-spacing : 2px;
     font-size: 11px;
+    word-wrap: normal;
     
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
@@ -93,10 +94,10 @@ html, body{
 }
 
 .btn-go-home:hover{
-    background-color: #FFCB39;
+    background-color: #5bcbf5;
     color: #fff;
     transform: scale(1.05);
-    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+    box-shadow: -20px 20px 20px rgba(200,200,90,0.3), 20px -20px 20px rgba(200,200,90,0.3);
 }
 
 .central-body{
@@ -137,9 +138,6 @@ html, body{
 */
 }
 
-.earth-moon{
-    
-}
 
 .object_astronaut{
     animation: rotate-astronaut 200s infinite linear both alternate;
