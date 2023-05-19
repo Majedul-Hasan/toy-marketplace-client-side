@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import HeaderFooterWrapper from '../../../Layout/HeaderFooterWrapper';
 import { AuthContext } from '../../../providers/AuthProviders';
 import SearchInput from './SearchInput';
+import { Tooltip } from 'react-tooltip';
 
 const Header = () => {
   const { user, logoutUser, setUser } = useContext(AuthContext);
@@ -113,13 +114,19 @@ const Header = () => {
               <div className='avatar'>
                 {user?.email ? (
                   <div className='w-10 rounded-full mx-2'>
-                    <img src={user.photoURL} />
+                    <img
+                      src={user.photoURL}
+                      data-tooltip-id='user-avatar'
+                      data-tooltip-content={user?.displayName}
+                    />
                   </div>
                 ) : null}
               </div>
             </div>
           </div>
         </header>
+
+        <Tooltip id='user-avatar' />
       </ComponentWrapper>
       <ComponentWrapper classes=' '>
         <SearchInput />
