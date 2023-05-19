@@ -39,10 +39,28 @@ const AuthProviders = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(AUTH, (loggedonUser) => {
-      // console.log(loggedonUser);
-      setUser(loggedonUser);
+    const unsubscribe = onAuthStateChanged(AUTH, (currentUser) => {
+      setUser(currentUser);
       setIsLoading(false);
+      if (currentUser && currentUser.email) {
+        const loggedUser = {
+          email: currentUser.email,
+        };
+        fetch(`${import.meta.env.VITE_API}/jwt`, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(loggedUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log('jwt res = ', data);
+            localStorage.setItem('toy-zone-token', data.token);
+          });
+      } else {
+        localStorage.removeItem('toy-zone-token');
+      }
     });
     return () => {
       unsubscribe();
