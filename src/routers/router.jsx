@@ -35,15 +35,15 @@ const router = createBrowserRouter([
 
       {
         path: '/register',
-        element: <Register />,
+        element: (
+          <PublicRoute>
+            <Register />
+          </PublicRoute>
+        ),
       },
       {
         path: '/all-toys',
-        element: (
-          <PublicRoute>
-            <AllToys />
-          </PublicRoute>
-        ),
+        element: <AllToys />,
       },
       {
         path: '/about',

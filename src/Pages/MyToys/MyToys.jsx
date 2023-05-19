@@ -1,7 +1,15 @@
-import React from 'react';
+import PageWrapper from '../../Layout/PageWrapper';
+import { Helmet } from 'react-helmet';
 
 const MyToys = () => {
-  return <div>MyToys</div>;
+  return (
+    <PageWrapper>
+      <Helmet>
+        <title>Toys-zone | MyToys </title>
+      </Helmet>
+      <div>MyToys</div>
+    </PageWrapper>
+  );
 };
 
 export default MyToys;
