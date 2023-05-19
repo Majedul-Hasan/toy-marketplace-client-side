@@ -17,11 +17,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
-    loader: () => fetch('http://localhost:5000'),
     children: [
       {
         path: '/',
         element: <Home />,
+        loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
       },
 
       {
