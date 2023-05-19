@@ -1,27 +1,46 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/Logo.svg';
 import ComponentWrapper from '../../../Layout/ComponentWrapper';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import HeaderFooterWrapper from '../../../Layout/HeaderFooterWrapper';
+import { AuthContext } from '../../../providers/AuthProviders';
+import SearchInput from './SearchInput';
 
 const Header = () => {
+  const { user, logoutUser, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   // eslint-disable-next-line no-unused-vars
-  const [user, setUser] = useState(null);
+  const [profileVisible, setProfileVisible] = useState(false);
+
   const handleLogOut = () => {
-    console.log('log me out');
+    logoutUser().then(() => {
+      setUser(null);
+      setProfileVisible(false);
+      navigate('/');
+    });
   };
+
   const NavItems = (
     <>
       <li>
         <Link to='/'>Home</Link>
       </li>
       <li>
+        <Link to='/all-toys'>All Toys </Link>
+      </li>
+      <li>
         <Link to='/about'>About </Link>
+      </li>
+      <li>
+        <Link to='/blogs'>Blogs </Link>
       </li>
       {user?.email ? (
         <>
           <li>
-            <Link to='/bookings'>My Bookings</Link>
+            <Link to='/add-toy'>Add A Toy</Link>
+          </li>
+          <li>
+            <Link to='/my-toys'>My Toys</Link>
           </li>
           <li>
             <button onClick={handleLogOut}>Log out</button>
@@ -75,21 +94,35 @@ const Header = () => {
                   {NavItems}
                 </ul>
               </div>
-              <Link className=' text-xl w-16 '>
-                <img
-                  src={logo}
-                  alt=''
-                />
+              <Link
+                to='/'
+                className=' text-xl overflow-x-visible flex  '>
+                {'TOYSZONE'.split('').map((x, i) => (
+                  <span
+                    className='bg-green-500 px-1 font-extrabold'
+                    key={i}>
+                    {x}
+                  </span>
+                ))}
               </Link>
             </div>
             <div className='navbar-center hidden lg:flex'>
               <ul className='menu menu-horizontal px-1'>{NavItems}</ul>
             </div>
             <div className='navbar-end'>
-              <a className='btn'>Get started</a>
+              <div className='avatar'>
+                {user?.email ? (
+                  <div className='w-10 rounded-full mx-2'>
+                    <img src={user.photoURL} />
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
         </header>
+      </ComponentWrapper>
+      <ComponentWrapper classes=' '>
+        <SearchInput />
       </ComponentWrapper>
     </HeaderFooterWrapper>
   );

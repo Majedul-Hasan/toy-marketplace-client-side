@@ -1,12 +1,15 @@
 import ComponentWrapper from '../../../Layout/ComponentWrapper';
 import HeaderFooterWrapper from '../../../Layout/HeaderFooterWrapper';
 import logo from '../../../assets/logo-01.png';
+import { AiFillClockCircle, AiFillMail } from 'react-icons/Ai';
+import { ImLocation2 } from 'react-icons/Im';
+import { BsFillTelephoneFill } from 'react-icons/Bs';
 
 const Footer = () => {
   return (
     <HeaderFooterWrapper bgPosition='bottom'>
       <ComponentWrapper classes='mt-10 pt-8'>
-        <footer className='footer grid-cols-1 md:grid-cols-4 '>
+        <footer className='footer grid-cols-1 md:grid-cols-6 '>
           <div className=' text-center col-span-2'>
             <div className='w-1/3 mx-auto'>
               <img
@@ -22,11 +25,11 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <span className='footer-title'>Services</span>
-            <a className='link link-hover'>Branding</a>
+            <span className='footer-title'>Toys</span>
+            <a className='link link-hover'>Brands</a>
             <a className='link link-hover'>Design</a>
-            <a className='link link-hover'>Marketing</a>
-            <a className='link link-hover'>Advertisement</a>
+            <a className='link link-hover'>category</a>
+            <a className='link link-hover'>colors</a>
           </div>
           <div>
             <span className='footer-title'>Company</span>
@@ -34,12 +37,38 @@ const Footer = () => {
             <a className='link link-hover'>Contact</a>
             <a className='link link-hover'>Jobs</a>
             <a className='link link-hover'>Press kit</a>
-          </div>
-          <div>
-            <span className='footer-title'>Legal</span>
             <a className='link link-hover'>Terms of use</a>
             <a className='link link-hover'>Privacy policy</a>
             <a className='link link-hover'>Cookie policy</a>
+          </div>
+          <div className='col-span-2'>
+            <span className='footer-title'>Have a Question?</span>
+            <p className='link link-hover flex gap-2 items-center '>
+              <AiFillClockCircle />
+              <span> Mon. - Fri.: 09:00 - 18:30</span>
+            </p>
+            <p className='link link-hover flex gap-2 items-center'>
+              <ImLocation2 />
+              <span> 164 7th Avenue, Seattle, WA 9801</span>
+            </p>
+            <p className='link link-hover flex gap-2 items-center'>
+              <BsFillTelephoneFill />
+              <span> +1.888.292.717</span>
+            </p>
+            <p className='link link-hover flex gap-2 items-center'>
+              <AiFillMail />
+              <span> shop@baby.street</span>
+            </p>
+          </div>
+
+          <div className=' '>
+            <span className='footer-title'>Payment Options</span>
+            <div className='w-40'>
+              <img
+                src='https://images.contentstack.io/v3/assets/bltee50a64aa85c8d90/blt1b4b0326d03391c3/615a92367e4c056146cb65fa/payment_methods.jpg'
+                alt=''
+              />
+            </div>
           </div>
         </footer>
       </ComponentWrapper>

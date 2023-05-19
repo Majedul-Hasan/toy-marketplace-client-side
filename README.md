@@ -57,7 +57,11 @@
   - VITE_messagingSenderId = 
   - VITE_appId = 
 
+  
 
+live Link :  https://toys-zone-9fb17.web.app/
+client repo : https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-Majedul-Hasan
+server repo :   https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-Majedul-Hasan
 
 # Task description
 <!-- Main Requirements -->
