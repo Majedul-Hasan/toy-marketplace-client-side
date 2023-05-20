@@ -5,10 +5,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>Toys-zone | about </title>
+        <title>Toys-zone | about us </title>
       </Helmet>
       <PageWrapper
-        pageTitle='About'
+        pageTitle='About Us'
         PageLink='Home/about'>
         <div>About</div>
       </PageWrapper>
