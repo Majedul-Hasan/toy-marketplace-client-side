@@ -30,7 +30,7 @@ const SingleBlogPage = () => {
               <h2 className='text-2xl font-semibold'>{title} </h2>
             </div>
 
-            <div className='flex gap-3 my-5'>
+            <div className='flex gap-3 my-5 flex-wrap'>
               {categories?.map((x, i) => (
                 <h3
                   key={i}

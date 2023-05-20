@@ -17,7 +17,7 @@ const BlogCard = ({ blog, idx }) => {
       </div>
       <div className='card-body w-1/2'>
         <h2 className='card-title my-2'>{title}</h2>
-        <div className='flex gap-3'>
+        <div className='flex gap-3 flex-wrap'>
           {categories?.map((x, i) => (
             <h3
               key={i}
