@@ -308,7 +308,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 0
-6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.  ✅
+6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the  **about**  route, your website title will be **‘PHero | About us’**.  ✅
 
 7.  Make the component name, folder structure, and route name meaningful. If needed, add comments.  ✅
 
