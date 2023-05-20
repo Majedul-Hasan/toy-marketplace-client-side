@@ -4,18 +4,22 @@ import RightSideComp from './RightSideComp';
 import LeftSideComponent from '../shared/LeftSideComponent';
 import { Helmet } from 'react-helmet';
 
-const Register = () => {
+const Login = () => {
   return (
-    <PageWrapper>
+    <>
       <Helmet>
         <title>Toys-zone | Login </title>
       </Helmet>
-      <main className='w-full flex'>
-        <LeftSideComponent />
-        <RightSideComp />
-      </main>
-    </PageWrapper>
+      <PageWrapper
+        pageTitle='Login'
+        PageLink='Home/Login'>
+        <main className='w-full flex'>
+          <LeftSideComponent />
+          <RightSideComp />
+        </main>
+      </PageWrapper>
+    </>
   );
 };
 
-export default Register;
+export default Login;
