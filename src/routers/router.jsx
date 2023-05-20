@@ -87,6 +87,8 @@ const router = createBrowserRouter([
             <UpdateToy />
           </PrivetRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API}/toys/${params.id}`),
       },
       {
         path: '/spinner',

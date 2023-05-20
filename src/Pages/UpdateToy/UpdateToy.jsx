@@ -4,12 +4,17 @@ import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
-import { useParams } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 
 const UpdateToy = () => {
+  const loadedToy = useLoaderData();
+
   const { user } = useContext(AuthContext);
   const { id } = useParams();
-  console.log(id);
+  console.log(id, loadedToy);
+  const navigate = useNavigate();
+
+  const { picture, name, price, description, category, available } = loadedToy;
 
   const handleBookService = (e) => {
     e.preventDefault();
@@ -39,8 +44,8 @@ const UpdateToy = () => {
     };
     console.log(toy);
 
-    fetch(`${import.meta.env.VITE_API}/toys`, {
-      method: 'POST',
+    fetch(`${import.meta.env.VITE_API}/toys/${id}`, {
+      method: 'PATCH',
       headers: {
         'content-type': 'application/json',
         authorization: `Bearer ${localStorage.getItem('toy-zone-token')}`,
@@ -50,10 +55,10 @@ const UpdateToy = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           // alert('service book successfully');
-          Swal.fire('great!', 'New toy successfully added!', 'success');
-          form.reset();
+          Swal.fire('great!', 'New toy successfully updated!', 'success');
+          navigate('/my-toys');
         }
       });
   };
@@ -76,6 +81,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='name'
+                  defaultValue={name}
                   className='input input-bordered'
                 />
               </div>
@@ -86,6 +92,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='picture'
+                  defaultValue={picture}
                   className='input input-bordered'
                 />
               </div>
@@ -96,6 +103,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='price'
+                  defaultValue={price}
                   className='input input-bordered'
                 />
               </div>
@@ -106,6 +114,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='available'
+                  defaultValue={available}
                   className='input input-bordered'
                 />
               </div>
@@ -116,6 +125,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='category'
+                  defaultValue={category}
                   className='input input-bordered'
                 />
               </div>
@@ -126,6 +136,7 @@ const UpdateToy = () => {
                 <input
                   type='text'
                   name='subCategory'
+                  defaultValue={loadedToy['sub-category']}
                   className='input input-bordered'
                 />
               </div>
@@ -136,6 +147,7 @@ const UpdateToy = () => {
                 <textarea
                   type='text'
                   name='description'
+                  defaultValue={description}
                   className='input input-bordered'
                 />
               </div>
