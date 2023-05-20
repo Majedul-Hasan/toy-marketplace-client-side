@@ -55,6 +55,7 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs />,
+        loader: () => fetch(`${import.meta.env.VITE_API}/blogs`),
       },
       {
         path: '/add-toy',
