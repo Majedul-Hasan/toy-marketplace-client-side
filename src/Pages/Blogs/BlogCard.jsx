@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const BlogCard = ({ blog }) => {
-  const { _id, title, photo, excerpt, categories, tags } = blog;
+const BlogCard = ({ blog, idx }) => {
+  const { title, photo, excerpt, categories, tags, slug } = blog;
   return (
-    <div className='card w-full card-side bg-sky-100 items-center gap-4 shadow-xl my-8 p-8'>
+    <div
+      className={`card w-full card-side bg-sky-100 items-center  gap-4 shadow-xl my-8 p-8 ${
+        idx % 2 && 'flex-row-reverse'
+      } `}>
       <div className='w-4/12'>
         <img
           className='block w-11/12'
@@ -38,9 +41,12 @@ const BlogCard = ({ blog }) => {
 
         {/* <div className=''>{excerpt}</div> */}
 
-        <div className='card-actions justify-end'>
+        <div
+          className={`card-actions ${
+            idx % 2 ? 'justify-start' : 'justify-end'
+          } `}>
           <Link
-            to={`/blogs/${_id}`}
+            to={`/blogs/${slug}`}
             className='btn btn-primary'>
             read more
           </Link>
@@ -52,6 +58,7 @@ const BlogCard = ({ blog }) => {
 
 BlogCard.propTypes = {
   blog: PropTypes.object,
+  idx: PropTypes.number,
 };
 
 export default BlogCard;
