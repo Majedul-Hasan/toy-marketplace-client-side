@@ -13,7 +13,8 @@ const Blogs = () => {
       </Helmet>
       <PageWrapper
         pageTitle='Blogs'
-        PageLink='Home/blogs'>
+        PageLink='Home/blogs'
+        imgLink='https://bloggerspassion.com/wp-content/uploads/2019/12/best-programming-blogs.jpg'>
         <div>
           <div>
             <h2 className='text-3xl font-bold underline my-5 text-center'>
@@ -21,10 +22,11 @@ const Blogs = () => {
             </h2>
           </div>
           <div>
-            {loadedBlogs?.map((blog) => (
+            {loadedBlogs?.map((blog, i) => (
               <BlogCard
                 key={blog._id}
                 blog={blog}
+                idx={i}
               />
             ))}
           </div>

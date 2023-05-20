@@ -2,13 +2,14 @@ import banner from '../../assets/travel-background.png';
 import ComponentWrapper from '../../Layout/ComponentWrapper';
 import PropTypes from 'prop-types';
 
-const Banner = ({ pageTitle, PageLink }) => {
+const Banner = ({ pageTitle, PageLink, imgLink }) => {
+  const photo = imgLink || banner;
   return (
     <ComponentWrapper classes='mt-0'>
       <div className='carousel w-full h-[350px] my-8'>
         <div className='carousel-item relative w-full'>
           <img
-            src={banner}
+            src={photo}
             className='w-full rounded-xl ml-auto mr-0'
           />
           <div className='absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#67999992] to-[#57c4c45e] w-full'>
@@ -34,6 +35,7 @@ const Banner = ({ pageTitle, PageLink }) => {
 Banner.propTypes = {
   pageTitle: PropTypes.string,
   PageLink: PropTypes.string,
+  imgLink: PropTypes.string,
 };
 
 export default Banner;
