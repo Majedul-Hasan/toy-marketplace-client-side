@@ -307,10 +307,10 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 5. On the **My Toys** page, you must implement a sorting system to sort the toys in **descending** and **ascending** orders based on the **price**. (Explore MongoDB sorting operation & implement it on the backend). The design of the sorting system depends on you.
 
 <br/>
+0
+6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.  ✅
 
-6. Give your website name. The website title will be changed according to the route you are clicking. Suppose your website name is PHero. Then, on the **‘about’** route, your website title will be **‘PHero | About us’**.
-
-7.  Make the component name, folder structure, and route name meaningful. If needed, add comments. 
+7.  Make the component name, folder structure, and route name meaningful. If needed, add comments.  ✅
 
 <br/>
 
@@ -323,7 +323,7 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 <br/>
 
-2. Add a spinner when the data is in a loading state. You can add a gif/jpg, use any package or customize it using CSS.
+2. Add a spinner when the data is in a loading state. You can add a gif/jpg, use any package or customize it using CSS.  ✅
 
 <br/>
 
@@ -347,11 +347,11 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 ### **Additional information:**
 
-1. You can use a local or host image anywhere or use pictures from the internet. And it's ok if you have the image url, but the image link doesn't work. 
-2. You can use vanilla CSS or any CSS library (Bootstrap, tailwind) you want. If you wish, you can use both Bootstrap and react-bootstrap. Also, if you want, you can use any tailwind component library such as DaisyUI, etc.
-3. Try to host your site on Firebase (Netlify hosting will need some extra configurations)
-4. Host your server-side application on Vercel. If needed, you can host somewhere else as well.
-4. Make Sure you deploy server-side and client-side on the first day. If you have any issues with hosting or GitHub push, please join the "Github and deploy" related support session.
+1. You can use a local or host image anywhere or use pictures from the internet. And it's ok if you have the image url, but the image link doesn't work.    ✅
+2. You can use vanilla CSS or any CSS library (Bootstrap, tailwind) you want. If you wish, you can use both Bootstrap and react-bootstrap. Also, if you want, you can use any tailwind component library such as DaisyUI, etc.   ✅
+3. Try to host your site on Firebase (Netlify hosting will need some extra configurations)    ✅ Firebase
+4. Host your server-side application on Vercel. If needed, you can host somewhere else as well.  ✅  Vercel
+4. Make Sure you deploy server-side and client-side on the first day. If you have any issues with hosting or GitHub push, please join the "Github and deploy" related support session.  ✅
 
 <br/>
 <hr/>
@@ -359,9 +359,9 @@ You can explore component libraries other than DaisyUI. Remember, a unique proje
 
 ### **What to submit:**
 
-1. Your client-side code GitHub repository
-2. Your server-side code GitHub repository
-3. Your live website link
+1. Your client-side code GitHub repository  ✅
+2. Your server-side code GitHub repository  ✅
+3. Your live website link    ✅
 
 <br/>
 <hr/>
