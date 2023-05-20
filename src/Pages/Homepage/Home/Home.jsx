@@ -7,12 +7,16 @@ const Home = () => {
   const loadedData = useLoaderData();
   console.log(loadedData);
   return (
-    <PageWrapper>
+    <>
       <Helmet>
         <title>Toys-zone | Home </title>
       </Helmet>
-      <Hero />
-    </PageWrapper>
+      <PageWrapper
+        pageTitle='Update Profile'
+        PageLink='Home/Update Profile '>
+        <Hero />
+      </PageWrapper>
+    </>
   );
 };
 

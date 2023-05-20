@@ -58,7 +58,9 @@ const AddToy = () => {
       <Helmet>
         <title>Toys-zone | AddToy </title>
       </Helmet>
-      <PageWrapper>
+      <PageWrapper
+        pageTitle='Add Toy'
+        PageLink='Home/AddToy'>
         <div className='w-full'>
           <form onSubmit={handleBookService}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -137,7 +139,7 @@ const AddToy = () => {
               <input
                 className='btn btn-primary btn-block'
                 type='submit'
-                value='Order Confirm'
+                value='Upload new toy'
               />
             </div>
           </form>

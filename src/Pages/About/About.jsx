@@ -3,12 +3,16 @@ import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
-    <PageWrapper>
+    <>
       <Helmet>
         <title>Toys-zone | about </title>
       </Helmet>
-      <div>About</div>
-    </PageWrapper>
+      <PageWrapper
+        pageTitle='About'
+        PageLink='Home/about'>
+        <div>About</div>
+      </PageWrapper>
+    </>
   );
 };
 

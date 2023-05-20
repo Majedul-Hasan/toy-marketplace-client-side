@@ -12,6 +12,7 @@ import Home from '../Pages/Homepage/Home/Home';
 import PrivetRoute from './PrivetRoute';
 import Spinner from '../components/spinner/Spinner';
 import PublicRoute from './PublicRoute';
+import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,14 @@ const router = createBrowserRouter([
         element: (
           <PrivetRoute>
             <AddToy />
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: '/update/profile',
+        element: (
+          <PrivetRoute>
+            <UpdateProfile />
           </PrivetRoute>
         ),
       },

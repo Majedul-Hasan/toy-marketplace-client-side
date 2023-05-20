@@ -35,7 +35,7 @@ const Header = () => {
       <li>
         <Link to='/blogs'>Blogs </Link>
       </li>
-      {user?.email ? (
+      {user?.uid ? (
         <>
           <li>
             <Link to='/add-toy'>Add A Toy</Link>
@@ -112,13 +112,15 @@ const Header = () => {
             </div>
             <div className='navbar-end'>
               <div className='avatar'>
-                {user?.email ? (
+                {user?.uid ? (
                   <div className='w-10 rounded-full mx-2'>
-                    <img
-                      src={user.photoURL}
-                      data-tooltip-id='user-avatar'
-                      data-tooltip-content={user?.displayName}
-                    />
+                    <Link to='/update/profile'>
+                      <img
+                        src={user.photoURL}
+                        data-tooltip-id='user-avatar'
+                        data-tooltip-content={user?.displayName}
+                      />
+                    </Link>
                   </div>
                 ) : null}
               </div>
