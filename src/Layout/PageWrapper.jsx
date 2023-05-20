@@ -14,7 +14,7 @@ const PageWrapper = ({ children, pageTitle, PageLink }) => {
         />
       )}
 
-      <div className='w-full md:w-11/12 lg:w-9/12 px-3 my-10 py-8 flex justify-center items-center mx-auto'>
+      <div className='w-full md:w-11/12 lg:w-9/12 px-3 mt-8 pt-8 flex justify-center items-center mx-auto'>
         {children}
       </div>
     </div>

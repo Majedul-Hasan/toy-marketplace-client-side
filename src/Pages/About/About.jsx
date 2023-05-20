@@ -1,6 +1,6 @@
-import ComponentWrapper from '../../Layout/ComponentWrapper';
 import PageWrapper from '../../Layout/PageWrapper';
 import { Helmet } from 'react-helmet';
+import Leaflet from './Leaflet';
 
 const About = () => {
   return (
@@ -34,7 +34,6 @@ const About = () => {
               </p>
             </div>
           </div>
-
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center py-8 my-8 bg-blue-600/25 w-full p-8'>
             <div className='card  bg-slate-100 text-gray-500 hover:animate-bounce'>
               <div className='card-body'>
@@ -66,7 +65,7 @@ const About = () => {
               </div>
             </div>
           </div>
-
+          {/* Philosophy */}
           <div className='mt-8 pt-8'>
             <div className='flex gap-8 items-center py-8 my-8'>
               <div className='flex-1'>
@@ -92,6 +91,11 @@ const About = () => {
                 />
               </div>
             </div>
+          </div>
+          <div
+            id='leaflet-map'
+            style={{ height: '49vh' }}>
+            <Leaflet />
           </div>
         </div>
       </PageWrapper>

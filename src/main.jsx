@@ -8,6 +8,8 @@ import 'leaflet/dist/leaflet.css';
 import router from './routers/router';
 import AuthProviders from './providers/AuthProviders';
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProviders>
