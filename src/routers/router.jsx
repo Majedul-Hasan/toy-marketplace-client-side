@@ -14,6 +14,7 @@ import Spinner from '../components/spinner/Spinner';
 import PublicRoute from './PublicRoute';
 import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 import UpdateToy from '../Pages/UpdateToy/UpdateToy';
+import SingleBlogPage from '../Pages/SingleBlogPage/SingleBlogPage';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,12 @@ const router = createBrowserRouter([
         path: '/blogs',
         element: <Blogs />,
         loader: () => fetch(`${import.meta.env.VITE_API}/blogs`),
+      },
+      {
+        path: '/blogs/:id',
+        element: <SingleBlogPage />,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API}/blogs/${params.id}`),
       },
       {
         path: '/add-toy',
