@@ -1,7 +1,7 @@
 import BackdropFilter from 'react-backdrop-filter';
 import PropTypes from 'prop-types';
 
-const HeaderFooterWrapper = ({ children, bgPosition }) => {
+const HeaderFooterWrapper = ({ children, bgPosition, visible }) => {
   console.log(bgPosition);
   return (
     <div
@@ -14,7 +14,9 @@ const HeaderFooterWrapper = ({ children, bgPosition }) => {
         backgroundRepeat: 'no-repeat',
       }}>
       <BackdropFilter
-        className='bluredForm'
+        className={`overflow-auto bluredForm ${
+          visible ? 'h-[600px] sm:h-[650px]' : ''
+        }`}
         filter={'blur(8px) sepia(50%)'}
         canvasFallback={true}
         html2canvasOpts={{
@@ -31,6 +33,7 @@ const HeaderFooterWrapper = ({ children, bgPosition }) => {
 HeaderFooterWrapper.propTypes = {
   children: PropTypes.node,
   bgPosition: PropTypes.string,
+  visible: PropTypes.bool,
 };
 
 export default HeaderFooterWrapper;
