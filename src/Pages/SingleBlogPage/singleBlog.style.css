@@ -1,0 +1,7 @@
+ol{
+    margin: 20px
+}
+
+ol li {
+    list-style: decimal;
+}

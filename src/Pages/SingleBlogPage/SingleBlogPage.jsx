@@ -2,20 +2,18 @@ import { useLoaderData } from 'react-router-dom';
 import PageWrapper from '../../Layout/PageWrapper';
 import { Helmet } from 'react-helmet';
 import BlogList from './BlogList';
+import './singleBlog.style.css';
 
 const SingleBlogPage = () => {
   const loadedBlog = useLoaderData();
   const {
     title,
     photo,
-    excerpt,
+
     categories,
     tags,
     body,
-    slug,
     mtitle,
-    mdesc,
-    createdAt,
   } = loadedBlog;
   console.log(loadedBlog);
   return (
@@ -49,6 +47,10 @@ const SingleBlogPage = () => {
                 </h3>
               ))}
             </div>
+            <div
+              className='my-2'
+              dangerouslySetInnerHTML={{ __html: body }}
+            />
           </div>
           <div className='w-full md:col-span-1'>
             <BlogList />
