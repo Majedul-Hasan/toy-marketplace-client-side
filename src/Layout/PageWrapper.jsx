@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Banner from '../Pages/shared/Banner';
 import { useLocation } from 'react-router-dom';
 
-const PageWrapper = ({ children, pageTitle, PageLink }) => {
+const PageWrapper = ({ children, pageTitle, PageLink, imgLink }) => {
   const { pathname } = useLocation();
   console.log(pathname);
   return (
@@ -11,6 +11,7 @@ const PageWrapper = ({ children, pageTitle, PageLink }) => {
         <Banner
           pageTitle={pageTitle}
           PageLink={PageLink}
+          imgLink={imgLink}
         />
       )}
 
@@ -25,6 +26,7 @@ PageWrapper.propTypes = {
   children: PropTypes.node,
   pageTitle: PropTypes.string,
   PageLink: PropTypes.string,
+  imgLink: PropTypes.string,
 };
 
 export default PageWrapper;
