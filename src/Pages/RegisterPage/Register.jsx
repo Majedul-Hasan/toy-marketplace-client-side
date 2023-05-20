@@ -6,15 +6,19 @@ import { Helmet } from 'react-helmet';
 
 const Register = () => {
   return (
-    <PageWrapper>
+    <>
       <Helmet>
         <title>Toys-zone | Register </title>
       </Helmet>
-      <main className='w-full flex'>
-        <LeftSideComponent />
-        <RightSideComp />
-      </main>
-    </PageWrapper>
+      <PageWrapper
+        pageTitle='Register new user'
+        PageLink='Home/Register'>
+        <main className='w-full flex'>
+          <LeftSideComponent />
+          <RightSideComp />
+        </main>
+      </PageWrapper>
+    </>
   );
 };
 
