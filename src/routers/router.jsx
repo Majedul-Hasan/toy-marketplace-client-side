@@ -47,13 +47,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/all-toys',
-        element: <DetailInfo />,
+        element: <AllToys />,
         // loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
         loader: () => fetch(`${import.meta.env.VITE_API}/total-toys`),
       },
       {
         path: '/toys/:id',
-        element: <AllToys />,
+        element: <DetailInfo />,
         // loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API}/toys/${params.id}`),
