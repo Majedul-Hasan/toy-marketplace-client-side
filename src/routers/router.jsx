@@ -53,7 +53,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/toys/:id',
-        element: <DetailInfo />,
+        element: (
+          <PrivetRoute>
+            <DetailInfo />
+          </PrivetRoute>
+        ),
         // loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API}/toys/${params.id}`),

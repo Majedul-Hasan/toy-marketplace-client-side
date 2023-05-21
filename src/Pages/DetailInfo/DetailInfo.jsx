@@ -3,15 +3,14 @@ import PageWrapper from '../../Layout/PageWrapper';
 
 const DetailInfo = () => {
   const deatail = useLoaderData();
-  console.log(deatail);
+  // console.log(deatail);
   const {
-    _id,
     picture,
     name,
     price,
     rating,
     description,
-    category,
+
     available,
     seller,
   } = deatail;
@@ -20,7 +19,7 @@ const DetailInfo = () => {
     <PageWrapper
       pageTitle='Toy Detail'
       PageLink='Home/details'
-      imgLink=''>
+      imgLink={picture}>
       <div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='flex-auto col-span-2'>
