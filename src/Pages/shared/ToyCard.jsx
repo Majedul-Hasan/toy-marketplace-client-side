@@ -27,7 +27,7 @@ const ToyCard = ({ toy }) => {
 
       <div className='flex flex-col p-4 justify-start items-center'>
         <h2 className='card-title text-base'>{toy?.name}</h2>
-        <p>
+        <div className='flex justify-between gap-3 my-5 '>
           <Rating
             initialRating={toy.rating}
             emptySymbol={
@@ -45,8 +45,8 @@ const ToyCard = ({ toy }) => {
               </span>
             }
           />
-          <span>{}</span>
-        </p>
+          <span> price:$ {toy.price}</span>
+        </div>
         <div className='card-actions justify-end'>
           <Link
             to={`/toys/${toy._id}`}

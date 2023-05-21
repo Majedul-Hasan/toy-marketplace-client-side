@@ -3,6 +3,10 @@ import PageWrapper from '../../Layout/PageWrapper';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import TableRow from './TableRow';
+import {
+  BsFillArrowUpSquareFill,
+  BsFillArrowDownSquareFill,
+} from 'react-icons/Bs';
 
 const MyToys = () => {
   const [toys, setToys] = useState([]);
@@ -30,6 +34,24 @@ const MyToys = () => {
       });
   }, [url, navigate]);
 
+  const sortingHandle = (sort) => {
+    fetch(`${url}?sort=${sort}`, {
+      method: 'GET',
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('toy-zone-token')}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.error) {
+          setToys(data);
+        } else {
+          // logout and then navigate
+          navigate('/');
+        }
+      });
+  };
+
   return (
     <>
       <Helmet>
@@ -53,7 +75,19 @@ const MyToys = () => {
                 <th>Name </th>
                 <th>category </th>
                 <th>sub-category </th>
-                <th>Price </th>
+                <th className='flex gap-2 '>
+                  <span> Price </span>
+                  <span
+                    className='text-lg text-violet-500 cursor-pointer'
+                    onClick={() => sortingHandle('desc')}>
+                    <BsFillArrowUpSquareFill></BsFillArrowUpSquareFill>
+                  </span>{' '}
+                  <span
+                    className='text-lg text-violet-500 cursor-pointer'
+                    onClick={() => sortingHandle('asc')}>
+                    <BsFillArrowDownSquareFill></BsFillArrowDownSquareFill>
+                  </span>{' '}
+                </th>
                 <th>qty</th>
                 <th>edit/delete </th>
               </tr>
