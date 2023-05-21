@@ -11,8 +11,9 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   // const [limit, setLimit] = useState(8);
   const [page, setPage] = useState(1);
-  const [size, setSize] = useState();
-  const totalPages = Math.ceil(totalNumberOfToys / 8);
+ 
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(totalNumberOfToys / itemsPerPage);
   const pageNumbers = [...Array(totalPages).keys()];
   console.log({ totalNumberOfToys, totalPages, pageNumbers });
 
@@ -54,6 +55,31 @@ const AllToys = () => {
               ))}
             </div>
             {/* pagination */}
+            <div className='pagination my-5'>
+              <div className='btn-group'>
+                {pageNumbers.map((number) => (
+                  <button
+                    onClick={() => setPage(number)}
+                    key={number}
+                    className={`btn btn-sm ${
+                      page === number ? 'bg-violet-400' : ''
+                    }`}>
+                    {number + 1}
+                  </button>
+                ))}
+              </div>
+              {/* <select
+                value={itemsPerPage}
+                onChange={handleSelectPageChange}>
+                {options.map((option) => (
+                  <option
+                    key={option}
+                    value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select> */}
+            </div>
           </div>
         </PageWrapper>
       )}
