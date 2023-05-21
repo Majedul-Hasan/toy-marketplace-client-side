@@ -28,9 +28,9 @@ const Home = () => {
           <Hero />
           <div>
             {/* you may like */}
-            <div data-aos='fade-up'>
+            {/* <div data-aos='fade-up'>
               <ToysYouMayLike />
-            </div>
+            </div> */}
 
             {/* new arivel  */}
             <NewArrival />
@@ -43,49 +43,6 @@ const Home = () => {
 
             {/* trending */}
             <Trending />
-
-            <div>
-              <h2
-                data-aos='fade-left'
-                className='font-bold text-3xl text-center mb-10 underline'>
-                All Toys
-              </h2>
-              <div className='grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-5 '>
-                {loadedData?.map((toy, idx) => (
-                  <ToyCard
-                    idx={idx}
-                    key={toy._id}
-                    toy={toy}
-                  />
-                ))}
-              </div>
-              {/* pagination */}
-              <div className='pagination my-5'>
-                {/* <div className='btn-group'>
-                {pageNumbers.map((number) => (
-                  <button
-                    onClick={() => setPage(number)}
-                    key={number}
-                    className={`btn btn-sm ${
-                      page === number ? 'bg-violet-400' : ''
-                    }`}>
-                    {number + 1}
-                  </button>
-                ))}
-              </div> */}
-                {/* <select
-                value={itemsPerPage}
-                onChange={handleSelectPageChange}>
-                {options.map((option) => (
-                  <option
-                    key={option}
-                    value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select> */}
-              </div>
-            </div>
           </div>
         </div>
       </PageWrapper>
