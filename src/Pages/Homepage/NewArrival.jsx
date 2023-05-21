@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ComponentWrapper from '../../Layout/ComponentWrapper';
 import ToyCard from '../shared/ToyCard';
 
-const NewArrival = (props) => {
+const NewArrival = () => {
   const [loadedData, setLoadedData] = useState([]);
   //   const [isLoading, setLoading] = useState(true);
 

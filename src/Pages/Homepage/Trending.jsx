@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ComponentWrapper from '../../Layout/ComponentWrapper';
 
 const Trending = () => {

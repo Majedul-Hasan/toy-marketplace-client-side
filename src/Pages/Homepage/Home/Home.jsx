@@ -24,7 +24,7 @@ const Home = () => {
       <PageWrapper
         pageTitle='Update Profile'
         PageLink='Home/Update Profile '>
-        <div>
+        <div className='mb-12'>
           <Hero />
           <div>
             {/* you may like */}
