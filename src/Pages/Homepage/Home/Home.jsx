@@ -3,11 +3,15 @@ import PageWrapper from '../../../Layout/PageWrapper';
 import Hero from '../../shared/Hero';
 import { Helmet } from 'react-helmet';
 import ToysYouMayLike from '../ToysYouMayLike';
-import NewArivel from '../NewArivel';
+import NewArrival from '../NewArrival';
 import Trending from '../Trending';
 import Gallery from '../Gallery';
 import ShopByCategory from '../ShopByCategory';
 import ToyCard from '../../shared/ToyCard';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Home = () => {
   const loadedData = useLoaderData();
@@ -24,25 +28,32 @@ const Home = () => {
           <Hero />
           <div>
             {/* you may like */}
-            <ToysYouMayLike />
+            <div data-aos='fade-up'>
+              <ToysYouMayLike />
+            </div>
+
             {/* new arivel  */}
-            <NewArivel />
+            <NewArrival />
             {/*shop by category */}
             <ShopByCategory />
 
             {/*gallery  */}
+
             <Gallery />
 
             {/* trending */}
             <Trending />
 
             <div>
-              <h2 className='font-bold text-3xl text-center mb-10 underline'>
+              <h2
+                data-aos='fade-left'
+                className='font-bold text-3xl text-center mb-10 underline'>
                 All Toys
               </h2>
               <div className='grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-5 '>
-                {loadedData?.map((toy) => (
+                {loadedData?.map((toy, idx) => (
                   <ToyCard
+                    idx={idx}
                     key={toy._id}
                     toy={toy}
                   />

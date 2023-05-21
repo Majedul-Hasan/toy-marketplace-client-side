@@ -6,8 +6,12 @@ import LazyLoad from 'react-lazy-load';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
-const ToyCard = ({ toy }) => {
+const ToyCard = ({ toy, idx }) => {
   // const imgw = '100%';
   // const imgH = '100%';
   const { user } = useContext(AuthContext);
@@ -19,8 +23,13 @@ const ToyCard = ({ toy }) => {
     }
     navigate(`/toys/${toy._id}`);
   };
+  const dataAOSProp =
+    idx % 3 === 0 ? 'fade-right' : idx % 3 === 1 ? 'flip-up' : 'fade-left';
   return (
-    <div className='card  bg-base-100 shadow-xl py-2'>
+    <div
+      // data-aos='flip-up'
+      data-aos={dataAOSProp}
+      className='card  bg-base-100 shadow-xl py-2'>
       <div className='mx-auto flex-auto h-2/3 '>
         <LazyLoad
           threshold={0.5}

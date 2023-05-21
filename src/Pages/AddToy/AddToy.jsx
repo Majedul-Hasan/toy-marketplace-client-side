@@ -19,6 +19,7 @@ const AddToy = () => {
     const category = form.category.value;
     const subCategory = form.subCategory.value;
     const description = form.description.value;
+    const createdAt = Date.now();
 
     const email = user?.email;
     const seller = user?.name || 'anonymous seller';
@@ -34,6 +35,7 @@ const AddToy = () => {
       category,
       'sub-category': subCategory,
       available,
+      createdAt,
     };
     console.log(toy);
 
