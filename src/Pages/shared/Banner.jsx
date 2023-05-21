@@ -19,7 +19,7 @@ const Banner = ({ pageTitle, PageLink, imgLink }) => {
           </div>
           <div className='absolute left-[50%] bottom-0 '>
             <div
-              className='bg-[#ff0443] relative text-white px-9 py-2  left-[-50%] ml-auto  '
+              className='bg-violet-600 text-violet-200 relative  px-9 py-2  left-[-50%] ml-auto  '
               style={{
                 clipPath: 'polygon(15% 0%,86% 0%,100% 100%, 0% 100%)',
               }}>

@@ -15,6 +15,7 @@ import PublicRoute from './PublicRoute';
 import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 import UpdateToy from '../Pages/UpdateToy/UpdateToy';
 import SingleBlogPage from '../Pages/SingleBlogPage/SingleBlogPage';
+import DetailInfo from '../Pages/DetailInfo/DetailInfo';
 
 const router = createBrowserRouter([
   {
@@ -46,9 +47,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/all-toys',
-        element: <AllToys />,
+        element: <DetailInfo />,
         // loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
         loader: () => fetch(`${import.meta.env.VITE_API}/total-toys`),
+      },
+      {
+        path: '/toys/:id',
+        element: <AllToys />,
+        // loader: () => fetch(`${import.meta.env.VITE_API}/toys`),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API}/toys/${params.id}`),
       },
       {
         path: '/about',

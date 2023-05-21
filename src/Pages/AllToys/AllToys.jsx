@@ -10,7 +10,7 @@ const AllToys = () => {
   const [isLoading, setLoading] = useState(true);
   const [toys, setToys] = useState([]);
   // const [limit, setLimit] = useState(8);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
  
   const itemsPerPage = 8;
   const totalPages = Math.ceil(totalNumberOfToys / itemsPerPage);

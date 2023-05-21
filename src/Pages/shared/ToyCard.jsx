@@ -15,18 +15,30 @@ const ToyCard = ({ toy }) => {
         <h2 className='card-title text-base'>{toy?.name}</h2>
         <p>
           <Rating
+            initialRating={toy.rating}
             emptySymbol={
-              <AiOutlineStar />
+              <span className='text-violet-500'>
+                <AiOutlineStar />
+              </span>
               //   <img
               //     src='assets/images/star-empty.png'
               //     className='icon'
               //   />
             }
-            fullSymbol={<AiFillStar />}
+            fullSymbol={
+              <span className='text-violet-500'>
+                <AiFillStar />
+              </span>
+            }
           />
+          <span>{}</span>
         </p>
         <div className='card-actions justify-end'>
-          <Link className='btn bg-violet-400'>View Details</Link>
+          <Link
+            to={`/toys/${toy._id}`}
+            className='btn bg-violet-400 border-0'>
+            View Details
+          </Link>
         </div>
       </div>
     </div>
