@@ -25,7 +25,7 @@ const SingleBlogPage = () => {
         PageLink='Home/blogs/detail'
         imgLink={photo.data}>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          <div className='flex-auto col-span-2'>
+          <div className='flex-auto col-span-2 blog'>
             <div className='mb-3'>
               <h2 className='text-2xl font-semibold'>{title} </h2>
             </div>

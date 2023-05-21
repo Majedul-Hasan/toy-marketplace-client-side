@@ -1,7 +1,12 @@
-ol{
+.blog ul ,ol{
     margin: 20px
 }
 
 ol li {
     list-style: decimal;
+}
+
+.blog ul li{
+    list-style: disc;
+
 }

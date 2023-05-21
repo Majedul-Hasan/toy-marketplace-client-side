@@ -37,7 +37,8 @@ const MyToys = () => {
       </Helmet>
       <PageWrapper
         pageTitle='MyToys'
-        PageLink='Home/MyToys '>
+        PageLink='Home/MyToys '
+        imgLink='https://images.unsplash.com/photo-1597670250484-0e9aff7f8804?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'>
         <div className=''>
           <table className='table table-zebra w-full break-words'>
             <caption className='bg-sky-100 py-2 text-2xl'>Ingredients</caption>

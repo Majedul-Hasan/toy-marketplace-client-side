@@ -60,7 +60,8 @@ const AddToy = () => {
       </Helmet>
       <PageWrapper
         pageTitle='Add Toy'
-        PageLink='Home/AddToy'>
+        PageLink='Home/AddToy'
+        imgLink='https://images.unsplash.com/photo-1504437484202-613bb51ce359?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80'>
         <div className='w-full'>
           <form onSubmit={handleBookService}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>

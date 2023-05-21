@@ -10,7 +10,8 @@ const About = () => {
       </Helmet>
       <PageWrapper
         pageTitle='About Us'
-        PageLink='Home/about'>
+        PageLink='Home/about'
+        imgLink='https://images.unsplash.com/photo-1526634332515-d56c5fd16991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'>
         {/* <ComponentWrapper classes='flex-col '> */}
         <div className='flex-col '>
           <h2 className='text-xl font-semibold  flex justify-center '>

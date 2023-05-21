@@ -12,7 +12,8 @@ const Login = () => {
       </Helmet>
       <PageWrapper
         pageTitle='Login'
-        PageLink='Home/Login'>
+        PageLink='Home/Login'
+        imgLink='imgLink'>
         <main className='w-full flex'>
           <LeftSideComponent />
           <RightSideComp />
