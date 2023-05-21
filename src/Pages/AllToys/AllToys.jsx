@@ -12,7 +12,7 @@ const AllToys = () => {
   // const [limit, setLimit] = useState(8);
   const [page, setPage] = useState(0);
  
-  const itemsPerPage = 8;
+  const itemsPerPage = 20;
   const totalPages = Math.ceil(totalNumberOfToys / itemsPerPage);
   const pageNumbers = [...Array(totalPages).keys()];
   console.log({ totalNumberOfToys, totalPages, pageNumbers });
@@ -49,7 +49,7 @@ const AllToys = () => {
             <h2 className='font-bold text-3xl text-center mb-10 underline'>
               All Toys
             </h2>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 '>
+            <div className='grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-5 '>
               {toys?.map((toy) => (
                 <ToyCard
                   key={toy._id}

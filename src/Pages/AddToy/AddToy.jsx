@@ -3,9 +3,11 @@ import PageWrapper from '../../Layout/PageWrapper';
 import { Helmet } from 'react-helmet';
 import { AuthContext } from '../../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleBookService = (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ const AddToy = () => {
     const description = form.description.value;
 
     const email = user?.email;
-    const seller = user?.name;
+    const seller = user?.name || 'anonymous seller';
 
     const toy = {
       picture,
@@ -53,11 +55,20 @@ const AddToy = () => {
         }
       });
   };
+  const emailNotFound = () => {
+    Swal.fire(
+      'email address not found!',
+      'please update your email address',
+      'warning'
+    ).then(() => navigate('/update/profile'));
+  };
+
   return (
     <>
       <Helmet>
         <title>Toys-zone | AddToy </title>
       </Helmet>
+      {!user.email && emailNotFound()}
       <PageWrapper
         pageTitle='Add Toy'
         PageLink='Home/AddToy'
