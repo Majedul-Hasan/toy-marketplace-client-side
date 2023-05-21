@@ -1,6 +1,6 @@
 const SearchInput = () => {
   return (
-    <form className='w-full bg-green-200/70 mb-1 flex'>
+    <form className='w-full bg-violet-200/70 mb-1 flex'>
       <input
         type='text'
         placeholder='search here'
@@ -8,7 +8,7 @@ const SearchInput = () => {
       />
       <button
         type='submit'
-        className='px-4 bg-green-300'>
+        className='px-4 bg-violet-300 text-violet-800 font-bold '>
         search
       </button>
     </form>

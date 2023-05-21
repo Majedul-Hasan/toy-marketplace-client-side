@@ -41,7 +41,9 @@ const MyToys = () => {
         imgLink='https://images.unsplash.com/photo-1597670250484-0e9aff7f8804?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'>
         <div className=''>
           <table className='table table-zebra w-full break-words'>
-            <caption className='bg-sky-100 py-2 text-2xl'>Ingredients</caption>
+            <caption className='bg-purple-300 py-2 text-2xl text-purple-800  uppercase font-bold'>
+              My Toys List
+            </caption>
 
             {/* head */}
             <thead>
@@ -52,7 +54,7 @@ const MyToys = () => {
                 <th>category </th>
                 <th>sub-category </th>
                 <th>Price </th>
-                <th>quantity available </th>
+                <th>qty</th>
                 <th>edit/delete </th>
               </tr>
             </thead>

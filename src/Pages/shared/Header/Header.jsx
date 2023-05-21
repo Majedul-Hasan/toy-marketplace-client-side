@@ -104,7 +104,7 @@ const Header = () => {
                   className=' text-xl overflow-x-visible flex  '>
                   {'TOYSZONE'.split('').map((x, i) => (
                     <span
-                      className='bg-green-500 px-1 font-extrabold hidden sm:flex'
+                      className=' px-1 font-extrabold hidden sm:flex'
                       key={i}>
                       {x}
                     </span>
